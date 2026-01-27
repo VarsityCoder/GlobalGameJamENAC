@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://co4tclxgftj2g"]
+
+[ext_resource type="PackedScene" uid="uid://8yegartiv8p" path="res://Scenes/character.tscn" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://blk4tb10e67jp" path="res://Scenes/player.gd" id="2_6t5aa"]
+[ext_resource type="PackedScene" uid="uid://bi5w7umx7xs1q" path="res://Assets/2 - August 2024 - Superhero/characters/Superhero.glb" id="2_cvnsp"]
+
+[node name="Player" unique_id=738590457 instance=ExtResource("1_v0iea")]
+script = ExtResource("2_6t5aa")
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=1739249020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Superhero" parent="." index="1" unique_id=1452207757 instance=ExtResource("2_cvnsp")]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." index="2" unique_id=65403158]
+
+[node name="Camera3D" type="Camera3D" parent="." index="3" unique_id=1863971932]
+transform = Transform3D(-0.6830127, 0.66597563, -0.29995024, -0.0062360317, 0.40533006, 0.9141492, 0.7303798, 0.6262459, -0.27269262, -5, 12, -5)
