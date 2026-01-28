@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bbx0ir5qfyu16"]
+
+[ext_resource type="PackedScene" uid="uid://6kf5ffba11kx" path="res://Scenes/PickUp/pick_up.tscn" id="1_mdo5f"]
+[ext_resource type="PackedScene" uid="uid://cvalqv4jrnjyp" path="res://Assets/18_PICKUP_SCENE/coin-gold.glb" id="2_q3pjc"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_q3pjc"]
+height = 0.5
+radius = 0.25
+
+[node name="PickUp" unique_id=1365878534 instance=ExtResource("1_mdo5f")]
+collision_layer = 0
+collision_mask = 2
+
+[node name="coin-gold2" parent="Visuals" parent_id_path=PackedInt32Array(1845600022) index="0" unique_id=1160152857 instance=ExtResource("2_q3pjc")]
+transform = Transform3D(-0.9159273, 0, -0.40134427, 0, 1, 0, 0.40134427, 0, -0.9159273, 0, 0.065728456, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="5" unique_id=933020773]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 0.3, 0)
+shape = SubResource("CylinderShape3D_q3pjc")
+debug_color = Color(0.09794078, 0.010539304, 0.0025798308, 0.41960785)

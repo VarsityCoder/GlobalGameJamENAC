@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bmmfc1vvnuyfq"]
+
+[ext_resource type="Texture2D" uid="uid://cbfj8x6yxtq32" path="res://Example/Assets/Images/Hdr/LevelSky.hdr" id="1_5ufo3"]
+[ext_resource type="Script" uid="uid://dkv081yb17o7j" path="res://Example/Scenes/Level/LevelBase.gd" id="1_78m1b"]
+[ext_resource type="PackedScene" uid="uid://diiqqw6341r72" path="res://Example/Scenes/Hud/Hud.tscn" id="2_bgw71"]
+[ext_resource type="AudioStream" uid="uid://dvxhdoqb1xwpm" path="res://Example/Assets/Audio/Music/Adventures in Adventureland.mp3" id="4_lmtt4"]
+[ext_resource type="AudioStream" uid="uid://cgnfsivumhmys" path="res://Example/Assets/Audio/Music/Lord of the Rangs.mp3" id="5_ooqsx"]
+[ext_resource type="PackedScene" uid="uid://mv7simvmm1gx" path="res://Scenes/Testing/test_platform.tscn" id="6_xm73k"]
+[ext_resource type="PackedScene" uid="uid://dkutkyol0so7v" path="res://Scenes/Player/player.tscn" id="7_2jtva"]
+[ext_resource type="PackedScene" uid="uid://bbx0ir5qfyu16" path="res://Scenes/PickUp/coin.tscn" id="8_cukt3"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bgw71"]
+panorama = ExtResource("1_5ufo3")
+energy_multiplier = 0.8
+
+[sub_resource type="Sky" id="Sky_78m1b"]
+sky_material = SubResource("PanoramaSkyMaterial_bgw71")
+
+[sub_resource type="Environment" id="Environment_3lxj6"]
+background_mode = 2
+sky = SubResource("Sky_78m1b")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_txgif"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("4_lmtt4")
+stream_1/stream = ExtResource("5_ooqsx")
+
+[node name="LevelBase" type="Node" unique_id=296627040]
+script = ExtResource("1_78m1b")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639065481]
+environment = SubResource("Environment_3lxj6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1180566817]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Hud" parent="." unique_id=1502740893 instance=ExtResource("2_bgw71")]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=640874231]
+stream = SubResource("AudioStreamRandomizer_txgif")
+volume_db = -6.0
+autoplay = true
+
+[node name="TestPlatform" parent="." unique_id=1274036526 instance=ExtResource("6_xm73k")]
+
+[node name="Player" parent="." unique_id=105479876 instance=ExtResource("7_2jtva")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+
+[node name="Pickups" type="Node" parent="." unique_id=778938016]
+
+[node name="PickUp" parent="Pickups" unique_id=1365878534 instance=ExtResource("8_cukt3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, 0)
+
+[node name="PickUp2" parent="Pickups" unique_id=1653524693 instance=ExtResource("8_cukt3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2, -11)
+
+[node name="PickUp3" parent="Pickups" unique_id=1049938258 instance=ExtResource("8_cukt3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2, -6)
+
+[node name="PickUp4" parent="Pickups" unique_id=543561771 instance=ExtResource("8_cukt3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -7)
+
+[node name="PickUp5" parent="Pickups" unique_id=1096636693 instance=ExtResource("8_cukt3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 2, 14)

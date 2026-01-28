@@ -15,15 +15,24 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="GlobalGameJam2026Mexico"
-run/main_scene="uid://c0ypswqntc8gr"
+run/main_scene="uid://bmmfc1vvnuyfq"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://ca8i5v2haijaj"
+SignalHub="*uid://cb5h2vqcp4v0s"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/mode=2
+
+[gui]
+
+theme/custom_font="uid://b501rwe5jpsa0"
 
 [input]
 
@@ -52,12 +61,31 @@ jump={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
+shoot={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+exit={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+quit={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
-3d_physics/layer_1="terrain"
-3d_physics/layer_2="player"
-3d_physics/layer_3="enemies"
+3d_physics/layer_1="platforms"
+3d_physics/layer_2="player_physics"
+3d_physics/layer_3="dangers"
+3d_physics/layer_4="player_hit"
+3d_physics/layer_5="player_bullet"
+3d_physics/layer_6="basic_key"
+3d_physics/layer_7="level_key"
 
 [rendering]
 
