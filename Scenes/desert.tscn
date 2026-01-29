@@ -2,10 +2,21 @@
 
 [ext_resource type="Terrain3DMaterial" uid="uid://m64uqagn3eba" path="res://Scenes/desert_data/material_desert.tres" id="1_n2wcl"]
 [ext_resource type="Terrain3DAssets" uid="uid://nhc4galjb7lv" path="res://Scenes/desert_data/asset_desert.tres" id="2_kxtj6"]
+[ext_resource type="PackedScene" uid="uid://dkutkyol0so7v" path="res://Scenes/Player/player.tscn" id="3_kxtj6"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_be4h2"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n2wcl"]
+
+[sub_resource type="Sky" id="Sky_kxtj6"]
+sky_material = SubResource("ProceduralSkyMaterial_n2wcl")
+
+[sub_resource type="Environment" id="Environment_be4h2"]
+background_mode = 2
+sky = SubResource("Sky_kxtj6")
 
 [node name="Desert" type="Node3D" unique_id=1410159876]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=456247013]
+transform = Transform3D(1, 0, 0, 0, 0.32886666, 0.94437635, 0, -0.94437635, 0.32886666, 0, 1.9621267, 0)
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1271257075]
 data_directory = "res://Scenes/high_desert_data"
@@ -14,6 +25,8 @@ assets = ExtResource("2_kxtj6")
 top_level = true
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=967231423]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9621267, 0)
-mesh = SubResource("CapsuleMesh_be4h2")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1785805481]
+environment = SubResource("Environment_be4h2")
+
+[node name="Player" parent="." unique_id=105479876 instance=ExtResource("3_kxtj6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.526161)

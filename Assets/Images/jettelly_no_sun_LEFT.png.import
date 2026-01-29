@@ -1,0 +1,27 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://37151636cal3"
+path="res://.godot/imported/jettelly_no_sun_LEFT.png-fd1e639f67d9057414025f4504648183.ccube"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Images/jettelly_no_sun_LEFT.png"
+dest_files=["res://.godot/imported/jettelly_no_sun_LEFT.png-fd1e639f67d9057414025f4504648183.ccube"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/arrangement=1
