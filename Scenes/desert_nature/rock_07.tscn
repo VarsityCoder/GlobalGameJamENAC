@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ecbe7fn16qsy"]
+
+[ext_resource type="PackedScene" uid="uid://c3v5dabio3qib" path="res://Assets/Models/rock07.fbx" id="1_vbkd3"]
+
+[node name="rock07" unique_id=228026697 instance=ExtResource("1_vbkd3")]

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://djv2f4fic4twk"]
+
+[ext_resource type="PackedScene" uid="uid://c0rmvlf216ffp" path="res://Assets/Models/cactus03.fbx" id="1_17mxn"]
+
+[node name="cactus03" unique_id=262864577 instance=ExtResource("1_17mxn")]

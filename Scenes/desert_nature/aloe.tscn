@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://brmob4l3e2c61"]
+
+[ext_resource type="PackedScene" uid="uid://c2cl4qdivi45o" path="res://Assets/Models/aloe.fbx" id="1_qbj7q"]
+
+[node name="aloe" unique_id=1664437894 instance=ExtResource("1_qbj7q")]

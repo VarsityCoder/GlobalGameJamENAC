@@ -1,0 +1,47 @@
+[gd_resource type="Terrain3DAssets" format=3 uid="uid://nhc4galjb7lv"]
+
+[ext_resource type="Texture2D" uid="uid://lgrmkimisthy" path="res://demo/assets/textures/ground_050_alb_ao_height.dds" id="1_hpwq6"]
+[ext_resource type="PackedScene" uid="uid://brmob4l3e2c61" path="res://Scenes/desert_nature/aloe.tscn" id="1_vobfb"]
+[ext_resource type="PackedScene" uid="uid://c7wonm33oseva" path="res://Scenes/desert_nature/cactus_01.tscn" id="2_5xarh"]
+[ext_resource type="Texture2D" uid="uid://cqqt1j6qy3q80" path="res://demo/assets/textures/ground_050_nor_roug.dds" id="2_aukcx"]
+[ext_resource type="PackedScene" uid="uid://p0to5kwvn58m" path="res://Scenes/desert_nature/cactus_02.tscn" id="3_xhagn"]
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_yp7oh"]
+name = "aloe"
+scene_file = ExtResource("1_vobfb")
+density = 1.74
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_1jwfo"]
+name = "cactus_01"
+id = 1
+scene_file = ExtResource("2_5xarh")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_yw0fm"]
+name = "cactus_02"
+id = 2
+scene_file = ExtResource("3_xhagn")
+density = 1.495
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_etkj1"]
+name = "desert"
+albedo_texture = ExtResource("1_hpwq6")
+normal_texture = ExtResource("2_aukcx")
+normal_depth = 0.719
+ao_strength = 2.0
+roughness = 0.878
+uv_scale = 1.0
+detiling_rotation = 0.213
+detiling_shift = 0.067
+
+[resource]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_yp7oh"), SubResource("Terrain3DMeshAsset_1jwfo"), SubResource("Terrain3DMeshAsset_yw0fm")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_etkj1")])

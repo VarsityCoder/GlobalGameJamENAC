@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dm4d2a6s3vhtw"]
+
+[ext_resource type="PackedScene" uid="uid://c05o4306o2vh7" path="res://Assets/Models/rock01.fbx" id="1_fpi3o"]
+
+[node name="rock01" unique_id=1221365661 instance=ExtResource("1_fpi3o")]

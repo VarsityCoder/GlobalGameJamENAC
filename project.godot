@@ -29,6 +29,15 @@ SignalHub="*uid://cb5h2vqcp4v0s"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/mode=2
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [gui]
 
