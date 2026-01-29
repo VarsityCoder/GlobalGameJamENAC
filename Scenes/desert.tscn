@@ -4,14 +4,19 @@
 [ext_resource type="Terrain3DAssets" uid="uid://nhc4galjb7lv" path="res://Scenes/desert_data/asset_desert.tres" id="2_kxtj6"]
 [ext_resource type="PackedScene" uid="uid://dkutkyol0so7v" path="res://Scenes/Player/player.tscn" id="3_kxtj6"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n2wcl"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kxtj6"]
+load_path = "res://.godot/imported/desierto2.jpeg-c5afabe1237ece12138ab7e9cfc21035.s3tc.ctex"
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_kxtj6"]
+panorama = SubResource("CompressedTexture2D_kxtj6")
 
 [sub_resource type="Sky" id="Sky_kxtj6"]
-sky_material = SubResource("ProceduralSkyMaterial_n2wcl")
+sky_material = SubResource("PanoramaSkyMaterial_kxtj6")
 
 [sub_resource type="Environment" id="Environment_be4h2"]
 background_mode = 2
 sky = SubResource("Sky_kxtj6")
+sky_rotation = Vector3(3.1415927, 0, 0)
 
 [node name="Desert" type="Node3D" unique_id=1410159876]
 

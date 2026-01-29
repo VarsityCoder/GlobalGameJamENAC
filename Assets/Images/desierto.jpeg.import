@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crpt46jxwtlfk"
-path.s3tc="res://.godot/imported/Cartoon_Desert2_baseColor.jpeg-b38b49c16231fa28de93720352852573.s3tc.ctex"
+uid="uid://b8htmed48dyyn"
+path.s3tc="res://.godot/imported/desierto.jpeg-3a34ce375df96762f7b8e7e62f4cb5ab.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Images/Cartoon_Desert2_baseColor.jpeg"
-dest_files=["res://.godot/imported/Cartoon_Desert2_baseColor.jpeg-b38b49c16231fa28de93720352852573.s3tc.ctex"]
+source_file="res://Assets/Images/desierto.jpeg"
+dest_files=["res://.godot/imported/desierto.jpeg-3a34ce375df96762f7b8e7e62f4cb5ab.s3tc.ctex"]
 
 [params]
 
