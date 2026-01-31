@@ -10,12 +10,13 @@ config_version=5
 
 [animation]
 
+warnings/check_invalid_track_paths=false
 compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
 config/name="GlobalGameJam2026Mexico"
-run/main_scene="uid://bmmfc1vvnuyfq"
+run/main_scene="uid://npwf57n567qx"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

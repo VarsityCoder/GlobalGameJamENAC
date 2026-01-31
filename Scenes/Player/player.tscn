@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://dkutkyol0so7v"]
 
-[ext_resource type="Animation" uid="uid://btevrvhg6jt1n" path="res://Assets/Animations/Root|Idle.anim" id="1_a3d8c"]
+[ext_resource type="Animation" uid="uid://btevrvhg6jt1n" path="res://Assets/Animations/RootIdle.anim" id="1_a3d8c"]
 [ext_resource type="Script" uid="uid://btby66lgck5aa" path="res://Scenes/Player/player.gd" id="1_mtuoh"]
-[ext_resource type="Animation" uid="uid://drral402vk427" path="res://Assets/Animations/Root|Jump.anim" id="2_mtuoh"]
-[ext_resource type="Animation" uid="uid://clfdq20txgwuk" path="res://Assets/Animations/Root|Run.anim" id="2_xpcdj"]
+[ext_resource type="Animation" uid="uid://0mkua4v8x8kn" path="res://Assets/Animations/RootJump.anim" id="2_mtuoh"]
+[ext_resource type="Animation" uid="uid://clfdq20txgwuk" path="res://Assets/Animations/RootRun.anim" id="2_xpcdj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwkp0"]
 resource_name = "skin"
@@ -227,12 +227,13 @@ advance_expression = "is_on_floor()"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jlvik"]
 states/Global_Root|Idle/node = SubResource("AnimationNodeAnimation_mtuoh")
-states/Global_Root|Idle/position = Vector2(416, 71.5)
+states/Global_Root|Idle/position = Vector2(416, 70.25)
 states/Global_Root|Jump/node = SubResource("AnimationNodeAnimation_dd0ac")
 states/Global_Root|Jump/position = Vector2(581, 220)
 states/Global_Root|Run/node = SubResource("AnimationNodeAnimation_htcer")
 states/Global_Root|Run/position = Vector2(693.5, 70.25)
 transitions = ["Global_Root|Idle", "Global_Root|Run", SubResource("AnimationNodeStateMachineTransition_dd0ac"), "Global_Root|Run", "Global_Root|Idle", SubResource("AnimationNodeStateMachineTransition_0u5uq"), "Start", "Global_Root|Idle", SubResource("AnimationNodeStateMachineTransition_mtuoh"), "Global_Root|Run", "Global_Root|Jump", SubResource("AnimationNodeStateMachineTransition_jlvik"), "Global_Root|Idle", "Global_Root|Jump", SubResource("AnimationNodeStateMachineTransition_gk6dx"), "Global_Root|Jump", "Global_Root|Run", SubResource("AnimationNodeStateMachineTransition_jhyir"), "Global_Root|Jump", "Global_Root|Idle", SubResource("AnimationNodeStateMachineTransition_74mp2")]
+graph_offset = Vector2(64, -31)
 
 [node name="Player" type="CharacterBody3D" unique_id=105479876]
 collision_layer = 2
